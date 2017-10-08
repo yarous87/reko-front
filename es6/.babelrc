@@ -1,0 +1,22 @@
+{
+    "presets": [
+        "react-app"
+        /*[
+            "env",
+            {
+                "targets": {
+                    "chrome": 60
+                },
+                "loose": true
+            }
+        ]*/
+    ],
+    "plugins": [
+        [
+            "transform-class-properties",
+            {
+                "spec": true
+            }
+        ]
+    ]
+}

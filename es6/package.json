@@ -1,0 +1,31 @@
+{
+    "name": "reko-front-es6",
+    "version": "1.0.0",
+    "description": "intro to es6",
+    "main": "webpack.config.js",
+    "dependencies": {
+        "babel-core": "*",
+        "babel-loader": "*",
+        "babel-preset-env": "*",
+        "webpack": "*",
+        "webpack-dev-server": "*",
+        "extract-text-webpack-plugin": "*",
+        "css-loader": "*",
+        "sass-loader": "*",
+        "node-sass": "*",
+        "uglifyjs-webpack-plugin": "*",
+        "copy-webpack-plugin": "*",
+        "optimize-css-assets-webpack-plugin": "*",
+        "babel-preset-react-app": "*",
+        "babel-plugin-transform-class-properties": "*",
+        "jquery": "*"
+    },
+    "browserslist": "last 2 versions, ie 11",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack-dev-server --open  --content-base ./app --progress --history-api-fallback --env.env dev",
+        "build": "webpack --env.env prod"
+    },
+    "author": "@yarous87",
+    "license": "ISC"
+}
