@@ -5,8 +5,8 @@ import { Post } from '../models/post';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    Post.findAll().then(products => {
-        res.json(products);
+    Post.findAll().then(posts => {
+        res.json(posts);
     });
 });
 
@@ -15,8 +15,8 @@ router.get('/:postId', (req, res) => {
         postId 
     } = req.params; 
 
-    Post.find(postId).then(product => {
-        res.json(product);
+    Post.find(postId).then(post => {
+        res.json(post);
     });
 });
 
@@ -32,8 +32,8 @@ router.post('/new', (req, res) => {
             content
         };
 
-        Post.create(data).then(product => {
-            res.json(product);
+        Post.create(data).then(post => {
+            res.json(post);
         });
     } else {
         res.json(null);
@@ -55,8 +55,8 @@ router.put('/update/:postId', (req, res) => {
         title ? data.title = title : null;
         content ? data.content = content : null;
         
-        Post.update(postId, data).then(product => {
-            res.json(product);
+        Post.update(postId, data).then(post => {
+            res.json(post);
         });
     } else {
         res.json(null);
@@ -68,8 +68,8 @@ router.delete('/delete/:postId', (req, res) => {
         postId
     } = req.params;
 
-    Post.delete(postId).then(product => {
-        res.json(product);
+    Post.delete(postId).then(post => {
+        res.json(post);
     });
 });
 
