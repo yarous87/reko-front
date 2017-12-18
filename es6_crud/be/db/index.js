@@ -2,7 +2,7 @@ import Sequelize from 'sequelize';
 
 const db = new Sequelize('', '', '', {
     dialect: 'sqlite',
-    storage: './crud.db'
+    storage: './db/crud.db'
 });
 
 db.authenticate()
