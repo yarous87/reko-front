@@ -14,10 +14,10 @@
 //diffs.diff3();
 //diffs.diff4();
 
-import arrow from './arrow';
+/*import arrow from './arrow';
 import * as deconstruct from './deconstruct';
 import * as spread from './spread';
-import * as rest from './rest';
+import * as rest from './rest';*/
 
 //arrow();
 
@@ -36,7 +36,43 @@ import * as rest from './rest';
 //spread.e4();
 //spread.e5();
 
-console.log(rest.e1(1, 2, 3, 4));
+/*console.log(rest.e1(1, 2, 3, 4));
 console.log(rest.e2(1, 2, 3, 4));
 rest.e3(1, 2, 3, 4);
-rest.e3();
+rest.e3();*/
+
+import { Test } from './class';
+//import { Test2 } from './class2';
+
+window.Test = Test;
+//window.Test2 = Test2;
+
+window.test = new Test(1, 2);
+//window.test2 = new Test2(1, 2, 3);
+
+/*document.addEventListener('click', e => console.log(e));
+
+Array.from(document.querySelectorAll('button')).forEach((btn, i) => {
+    btn.addEventListener('click', e => {
+        if (i == 2) {
+            e.stopImmediatePropagation();
+        }
+
+        console.log('btn2:' + e.target);
+    });
+});
+
+Array.from(document.querySelectorAll('button')).forEach((btn, i) => {
+    btn.addEventListener('click', e => {
+        if (i == 1) {
+            e.stopPropagation();
+        }
+
+        console.log('btn:' + e.target);
+    });
+});*/
+
+document.getElementById('test1').addEventListener('click', () => {
+    window.test.showAlert1();
+});
+document.getElementById('test2').addEventListener('click', window.test.showAlert2);

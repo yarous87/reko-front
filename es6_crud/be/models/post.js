@@ -35,22 +35,22 @@ class Post {
     }
 
     update(id, data) {
-        return this.find(id).then(product => {
-            if (product) {
-                return product.update(data);
+        return this.find(id).then(post => {
+            if (post) {
+                return post.update(data);
             }
 
-            return product;
+            return post;
         });
     }
 
     delete(id) {
-        return this.find(id).then(product => {
-            if (product) {
-                return product.destroy();
+        return this.find(id).then(post => {
+            if (post) {
+                return post.destroy();
             }
 
-            return product;
+            return post;
         });
     }
 }
