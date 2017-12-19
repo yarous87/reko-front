@@ -5,10 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
-        <link rel="stylesheet" type="text/css" href="/asstes/styles.css">
+        <link rel="stylesheet" type="text/css" href="/assets/styles.css">
     </head>
     <body>
-        
+        <div class="container">
+            <div class="clearfix">
+                <button class="btn btn-primary btn-lg" id="add-new">
+                    Dodaj nowy
+                </button>
+            </div>
+
+            <section id="post-archive">
+
+            </section>
+        </div>
+
+        <form class="modal" id="post-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="title">Tytuł</label>
+                            <input type="text" class="form-control" id="title" name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Treść</label>
+                            <textarea class="form-control" id="content" rows="3" name="content"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
         <script src="/assets/bundle.js"></script>
     </body>
 </html>

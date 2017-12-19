@@ -1,0 +1,15 @@
+.btn {
+    cursor: pointer;
+}
+
+#add-new {
+    float: right;
+}
+
+#post-archive {
+    pointer-events: none;
+
+    .btn {
+        pointer-events: all;
+    }
+}

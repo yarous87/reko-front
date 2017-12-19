@@ -25,7 +25,7 @@ router.post('/new', (req, res) => {
         title,
         content
     } = req.body;
-    
+    console.log(req.body);
     if (title && content) {
         const data = {
             title,
