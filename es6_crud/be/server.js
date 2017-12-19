@@ -12,4 +12,4 @@ app.use(bodyParser.json());
 app.use(auth);
 app.use(router);
 
-app.listen(8081, () => console.log('Example app listening on port 3000!'));
+app.listen(8081, () => console.log('Example app listening on port 8081!'));

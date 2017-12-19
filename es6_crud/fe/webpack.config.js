@@ -42,6 +42,12 @@ module.exports = function (env = { env: 'prod' }) {
                     use: ExtractTextPlugin.extract({
                         use: ['css-loader', 'sass-loader'],
                     })
+                },
+                {
+                    test: /\.css$/,
+                    use: ExtractTextPlugin.extract({
+                        use: ['css-loader'],
+                    })
                 }
             ]
         },
