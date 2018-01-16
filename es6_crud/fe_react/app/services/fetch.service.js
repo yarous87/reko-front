@@ -1,6 +1,6 @@
 import base64 from 'base-64';
 
-class Fetch {
+class FetchService {
     constructor() {
         this.listeners = {};
         this.headers = new Headers();
@@ -67,4 +67,4 @@ class Fetch {
     }
 }
 
-export { Fetch };
+export { FetchService };

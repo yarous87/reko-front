@@ -1,4 +1,4 @@
-import { Fetch } from './fetch.service';
+import { FetchService } from './fetch.service';
 
 const URLS = {
     list: '/api/posts',
@@ -8,7 +8,7 @@ const URLS = {
     delete: '/api/posts/delete/'
 };
 
-class Post extends Fetch {
+class PostService extends FetchService {
     getPosts() {
         return this.get(URLS.list);
     }
@@ -37,6 +37,6 @@ class Post extends Fetch {
     }
 }
 
-const PostInstance = new Post();
+const PostServiceInstance = new PostService();
 
-export { PostInstance as Post }; 
+export { PostServiceInstance as PostService }; 
